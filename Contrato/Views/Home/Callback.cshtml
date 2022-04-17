@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        Payment
+    </div>
+    <div class="card-body">
+        <pre id="json"></pre>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search)
+    document.getElementById("json").textContent = JSON.stringify(Object.fromEntries(params), undefined, 2);
+</script>
